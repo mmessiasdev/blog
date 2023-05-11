@@ -12,7 +12,7 @@ const ThemeContainer = ({toggleTheme}) => {
 
     return (
         <>
-            <ContainerHeader data-aos="fade-left" data-aos-delay="1200" data-aos-duration='1500'>
+            <ContainerHeader >
                 <Container pad='0px 10px'>
                     <FaMoon />
                 </Container>

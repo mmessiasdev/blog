@@ -1,12 +1,17 @@
-import { Container } from "../../styeles/container/style";
+import { ContainerColorTheme } from "../../styeles/container/style";
 import TypeText from "../text";
 
-const DefaultTitle = () => {
+
+interface props{
+    children?: React.ReactNode;
+}
+
+const DefaultTitle = ({children}: props) => {
     return(
         <>
-            <Container height="300px" color="#f4f4f4" disp="flex" justify="center" aligh="center">
-                
-            </Container>
+            <ContainerColorTheme height="275px" disp="flex" justify="center" aligh="center">
+                {children}
+            </ContainerColorTheme>
         </>
     )
 }
