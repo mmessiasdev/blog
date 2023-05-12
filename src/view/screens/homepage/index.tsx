@@ -1,3 +1,5 @@
+import ContainerLink from "../../components/content/containerlink";
+import References from "../../components/content/contentscreen/referencies";
 import TypeText from "../../components/content/text";
 import DefaultTitle from "../../components/content/title";
 import { Container } from "../../components/styeles/container/style"
@@ -21,6 +23,7 @@ const HomePage = () => {
                 </DefaultTitle>
                 <Container pad="100px">
                     <TypeText tag="h1">Blog</TypeText>
+                    <ContainerLink/>
                 </Container>
 
             </Container>

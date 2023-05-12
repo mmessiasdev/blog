@@ -4,6 +4,7 @@ import History from '../../controller/history';
 import Style from '../../style';
 import GlobalStyle from '../styles/global';
 import HomePage from '../screens/homepage';
+import Content from '../screens/content';
 
 
 function RoutesPage() {
@@ -16,6 +17,8 @@ function RoutesPage() {
                     <Route path='/' element={<HomePage />} />
                     <Route path='/homepage' element={<HomePage />} />
                     <Route path='/blog' element={<HomePage />} />
+                    <Route path='/content' element={<Content />} />
+
                 </Routes>
             </Router>
         </>

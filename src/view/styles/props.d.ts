@@ -19,9 +19,9 @@ declare module 'styled-components' {
         opacity?: string,    
         left?: string,
         backcolor?:string,
-        mwidth?: string,
-        mheight?: string,
         blur?: string,
         maxheight?: string,
+        maxwidth?: string,
+        border?: string,
     }
 }

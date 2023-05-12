@@ -55,7 +55,7 @@ export default createGlobalStyle<Props>`
     h5{
         font-size: 15px;
         background-color: transparent;
-        font-weight: bold;
+        font-weight: lighter;
         color: ${props => props.theme.colors.text};
     }
     h6{

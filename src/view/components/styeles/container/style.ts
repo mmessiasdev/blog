@@ -12,11 +12,13 @@ export const Container = styled.div<Props>`
     flex-direction: ${p => p.direc};
     overflow: ${p => p.overflow};
     border-radius: ${p => p.radius};
+    border: ${p => p.border};
     position: ${p => p.posit};
     opacity: ${p => p.opacity};
     left: ${p => p.left};
     margin: ${p => p.margin};
     background-color: ${p => p.color};
+    max-width: ${p => p.maxwidth};
     `
 export const ContainerBackTheme = styled.div<Props>`
     width: ${p => p.width}; 
@@ -53,7 +55,8 @@ export const ContainerColorTheme = styled.div<Props>`
     margin: ${p => p.margin};
     backdrop-filter: blur(${p => p.blur});
     background-color: ${p => p.theme.colors.secundaryback};
-
+    max-width: ${p => p.maxwidth};
+    max-height: ${p => p.maxheight};
 `
 
 
