@@ -85,6 +85,49 @@ export default createGlobalStyle<Props>`
     .gradient{
         -webkit-mask-image: linear-gradient(to right, transparent 0%, ${p => p.theme.colors.terciary} 100%);
     }
+    .markdownContainer{
+        h1{
+            font-size: 50;
+            color: ${props => props.theme.colors.text};
+            text-align: start;
+            background-color: transparent;
+        }
+        h2{
+            font-size: 20px;
+            font-weight: 400;
+            background-color: transparent;
+            color: ${props => props.theme.colors.text};
+        }
+        h3{
+            font-size: 15px;
+            font-weight: 200;
+            background-color: transparent;
+            color: ${props => props.theme.colors.text};
+        }
+        h4{
+            font-size: 13px;
+            background-color: transparent;
+            font-weight: 100;
+            color: ${props => props.theme.colors.text};
+        }
+        h5{
+        font-size: 13px;
+        background-color: transparent;
+        font-weight: 100;
+        color: ${props => props.theme.colors.text};
+        }
+        h6{
+            font-size: 10px;
+            position: relative;
+            background-color: transparent;
+            font-weight: 100;
+            opacity: 100%;
+            width: auto;
+            text-align: start;
+            overflow: hidden;
+            color: ${props => props.theme.colors.text};
+        }
+    }
 
     
     @media (max-width: 350px) {

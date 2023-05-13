@@ -49,7 +49,12 @@ export default createGlobalStyle`
         object-fit: cover;
         width: 100%;
         height: 100%;
-    } 
+    }
+    .markdownContainer{
+        font-style: none;
+        font-size: none;
+        text-decoration: none;
+    }
 
 
 

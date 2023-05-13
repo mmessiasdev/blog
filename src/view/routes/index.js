@@ -17,7 +17,7 @@ function RoutesPage() {
                     <Route path='/' element={<HomePage />} />
                     <Route path='/homepage' element={<HomePage />} />
                     <Route path='/blog' element={<HomePage />} />
-                    <Route path='/content' element={<Content />} />
+                    <Route path='/content/:id' element={<Content />} />
 
                 </Routes>
             </Router>

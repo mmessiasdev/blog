@@ -11,7 +11,7 @@ interface props{
 const ContentMd = ({ markdown }: props) => {
     return (
         <>
-            <Container pad="75px 0px">
+            <Container pad="75px 0px" className="markdownContainer">
                 <ReactMarkdown children={markdown} remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]} />
             </Container>
         </>

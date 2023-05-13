@@ -1,10 +1,22 @@
+import { useEffect, useState } from "react";
 import ContainerLink from "../../components/content/containerlink";
-import References from "../../components/content/contentscreen/referencies";
 import TypeText from "../../components/content/text";
 import DefaultTitle from "../../components/content/title";
-import { Container } from "../../components/styeles/container/style"
+import { Container } from "../../components/styeles/container/style";
+
+
+
 
 const HomePage = () => {
+
+    const [post, setPosts] = useState<PostsModel[]>([]);
+
+    useEffect(() => {
+        fetch("http://localhost:1337/api/contents/").then(response => response.json()).then(data => setPosts(data.data));
+        console.log(post);
+    }, [])
+
+
     return (
         <>
             <Container width="100vw" height="100vh" justify="center" aligh="center">
@@ -23,7 +35,14 @@ const HomePage = () => {
                 </DefaultTitle>
                 <Container pad="100px">
                     <TypeText tag="h1">Blog</TypeText>
-                    <ContainerLink/>
+                    {post.map((res) => {
+                        return (
+                            <>
+                                <ContainerLink href={`/content/${res.id}`} title={res.attributes.supertitle} desc={res.attributes.superdesc}/>
+
+                            </>
+                        )
+                    })}
                 </Container>
 
             </Container>
