@@ -15,7 +15,7 @@ const ContainerLink = ({ href, title, desc }: props) => {
         <>
             <Link to={href}>
                 <Container width="100%" disp="flex" direc="column" justify="center" aligh="center" margin="75px 0px">
-                    <ContainerColorTheme maxwidth="900px" width="100%" maxheight="150px" radius="20px" pad="30px 20px" overflow="hidden">
+                    <ContainerColorTheme maxwidth="900px" width="100%" radius="20px" pad="30px 20px" overflow="hidden">
                         <TypeText tag="h3">
                             {title}
                         </TypeText>

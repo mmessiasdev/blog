@@ -7,4 +7,5 @@ type PostsModel = {
     markdown: string,
     create: string,
     attributes: any,
+    reference: string,
 }

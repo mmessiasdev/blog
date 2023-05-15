@@ -4,8 +4,9 @@ import References from "../../components/content/contentscreen/referencies";
 import Subtitle from "../../components/content/contentscreen/subtitle";
 import TypeText from "../../components/content/text";
 import DefaultTitle from "../../components/content/title";
-import { Container } from "../../components/styeles/container/style";
+import { Container, ContainerContent } from "../../components/styeles/container/style";
 import { useParams } from "react-router-dom";
+
 
 const Content = () => {
 
@@ -23,23 +24,27 @@ const Content = () => {
 
     return (
         <>
-            <Container>
-                <DefaultTitle>
-                    <TypeText tag="h2">
-                    </TypeText>
-                </DefaultTitle>
-                <Container pad="100px 20%">
-                    {post &&
-                        <>
-                            <Subtitle subtitle={post.attributes.title} desc={post.attributes.desc} img={`http://localhost:1337${post.attributes.illustration.data.attributes.url}`}/>
-                            <ContentMd markdown={post.attributes.markdown}/>
-                        </>}
-                    <TypeText tag="h5">
-                        Referências
-                    </TypeText>
-                    <References />
+            {post &&
+                <Container>
+                    <DefaultTitle>
+                        <Container pad="0px 50px">
+                            <TypeText tag="h2">
+                                {post.attributes.supertitle}
+                            </TypeText>
+
+                        </Container>
+                    </DefaultTitle>
+                    <ContainerContent pad="100px 20%" className="contentScreen">
+                        <Subtitle subtitle={post.attributes.title} desc={post.attributes.desc} img={`http://localhost:1337${post.attributes.illustration.data.attributes.url}`} />
+                        <ContentMd title={post.attributes.supertitle} markdown={
+                            post.attributes.markdown}/>
+                        <TypeText tag="h5">
+                            Referência
+                        </TypeText>
+                        <References texturl={post.attributes.reference} />
+                    </ContainerContent>
                 </Container>
-            </Container>
+            }
         </>
     )
 }

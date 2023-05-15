@@ -27,9 +27,7 @@ export default createGlobalStyle<Props>`
     }
     h1{
         font-size: 60px;
-        color: ${props => props.theme.colors.text};
         text-align: center;
-        background-color: transparent;
     }
     .initialInfo {
         text-align: start;
@@ -37,27 +35,18 @@ export default createGlobalStyle<Props>`
     h2{
         font-size: 40px;
         font-weight: 300;
-        background-color: transparent;
-        color: ${props => props.theme.colors.text};
     }
     h3{
         font-size: 25px;
         font-weight: bold;
-        background-color: transparent;
-        color: ${props => props.theme.colors.text};
     }
     h4{
         font-size: 20px;
-        background-color: transparent;
         font-weight: normal;
-        color: ${props => props.theme.colors.text};
     }
     h5{
         font-size: 15px;
-        background-color: transparent;
-        font-weight: lighter;
-        color: ${props => props.theme.colors.text};
-    }
+        font-weight: lighter;    }
     h6{
         font-size: 100px;
         position: absolute; 

@@ -3,6 +3,8 @@ import ContainerLink from "../../components/content/containerlink";
 import TypeText from "../../components/content/text";
 import DefaultTitle from "../../components/content/title";
 import { Container } from "../../components/styeles/container/style";
+import { Avatar } from "@mui/material";
+
 
 
 
@@ -22,8 +24,10 @@ const HomePage = () => {
             <Container width="100vw" height="100vh" justify="center" aligh="center">
                 <DefaultTitle>
                     <Container disp="flex" pad="0px 100px">
-                        <img height="100px" src="https://github.com/mmessiasdev/ImagesDeploy/assets/78608382/416159d0-801d-4a47-b893-251dffe5319a" />
-                        <Container margin="0px 0px 0px 20px" width="400px">
+                        <Container width="30%" disp="flex" justify="center" aligh="center">
+                            <Avatar sx={{ width: 100, height: 100 }} alt="Perfil" src="https://github.com/mmessiasdev/ImagesDeploy/assets/78608382/416159d0-801d-4a47-b893-251dffe5319a" />
+                        </Container>
+                        <Container margin="0px 0px 0px 20px" width="70%">
                             <TypeText tag="h2">
                                 M. Messias
                             </TypeText>
@@ -33,12 +37,12 @@ const HomePage = () => {
                         </Container>
                     </Container>
                 </DefaultTitle>
-                <Container pad="100px">
+                <Container pad="10%">
                     <TypeText tag="h1">Blog</TypeText>
                     {post.map((res) => {
                         return (
                             <>
-                                <ContainerLink href={`/content/${res.id}`} title={res.attributes.supertitle} desc={res.attributes.superdesc}/>
+                                <ContainerLink href={`/content/${res.id}`} title={res.attributes.supertitle} desc={res.attributes.superdesc} />
 
                             </>
                         )

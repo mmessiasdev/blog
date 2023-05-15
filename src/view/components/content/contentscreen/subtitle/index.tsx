@@ -14,11 +14,11 @@ const Subtitle = ({ subtitle, desc, img }: props) => {
                 <TypeText tag="h3">
                     {subtitle}
                 </TypeText>
-                <Container disp="flex" justify="space-between" margin="100px 0px 0px 0px">
-                    <TypeText width="50%" tag="h5">
+                <Container disp="flex" justify="space-between" margin="100px 0px 0px 0px" className="subtitleContent">
+                    <TypeText width="50%" tag="h5" className="subtitleContent">
                         {desc}
                     </TypeText>
-                    <Container width="40%" height="400px" disp="flex" justify="center" overflow="hidden" radius="20px">
+                    <Container className="subtitleContent" width="40%" height="400px" disp="flex" justify="center" overflow="hidden" radius="20px">
                         <img className="img" src={img} alt="wallpaper" />
                     </Container>
                 </Container>

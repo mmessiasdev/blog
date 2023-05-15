@@ -1,5 +1,4 @@
 import { ContainerColorTheme } from "../../styeles/container/style";
-import TypeText from "../text";
 
 
 interface props{

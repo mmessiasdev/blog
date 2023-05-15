@@ -51,9 +51,7 @@ export default createGlobalStyle`
         height: 100%;
     }
     .markdownContainer{
-        font-style: none;
-        font-size: none;
-        text-decoration: none;
+        
     }
 
 
@@ -61,32 +59,6 @@ export default createGlobalStyle`
 
     /* ---- RESPONSIVE ---- */
 
-
-
-    @media (max-width: 960px) {
-        .header{
-            display: none;
-        }
-        .curriculum {
-            display: none;
-        }
-        .sizeBannerProjGit{
-            width: 150px;
-        }
-
-        .initialbuttons {
-            width: 100%;
-        }
-
-        .homewallpaper {
-            width: 100%;
-            position: absolute;
-        }
-
-        .homewallpaperImg {
-            opacity: 50%;
-        }
-    }
 
     @media (max-width: 750px) {
         .initialbuttons {
@@ -158,6 +130,13 @@ export default createGlobalStyle`
 
         .skillsListMobile {
             display: inline;
+        }
+        .subtitleContent{
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 40px;
         }
 
     }
