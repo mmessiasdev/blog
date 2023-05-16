@@ -4,6 +4,7 @@ import TypeText from "../../components/content/text";
 import DefaultTitle from "../../components/content/title";
 import { Container } from "../../components/styeles/container/style";
 import { Avatar } from "@mui/material";
+import Footer from "../../components/content/footer";
 
 
 
@@ -37,8 +38,10 @@ const HomePage = () => {
                         </Container>
                     </Container>
                 </DefaultTitle>
-                <Container pad="10%">
-                    <TypeText tag="h1">Blog</TypeText>
+                <Container pad="0px 10%">
+                    <Container pad="100px 0px 0px 0px">
+                        <TypeText tag="h1">Blog</TypeText>
+                    </Container>
                     {post.map((res) => {
                         return (
                             <>
@@ -47,6 +50,7 @@ const HomePage = () => {
                             </>
                         )
                     })}
+                    <Footer />
                 </Container>
 
             </Container>

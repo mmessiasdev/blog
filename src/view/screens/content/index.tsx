@@ -6,8 +6,7 @@ import TypeText from "../../components/content/text";
 import DefaultTitle from "../../components/content/title";
 import { Container, ContainerContent } from "../../components/styeles/container/style";
 import { useParams } from "react-router-dom";
-import Highlight from "react-highlight";
-
+import Footer from "../../components/content/footer";
 
 
 const Content = () => {
@@ -33,16 +32,19 @@ const Content = () => {
                             <TypeText tag="h2">
                                 {post.attributes.supertitle}
                             </TypeText>
-
                         </Container>
                     </DefaultTitle>
                     <ContainerContent pad="0px 20%" className="contentScreen">
-                        <Subtitle subtitle={post.attributes.title} desc={post.attributes.desc} img={`http://localhost:1337${post.attributes.illustration.data.attributes.url}`} />
+                        {post.attributes.title &&
+                            <Subtitle subtitle={post.attributes.title} desc={post.attributes.desc} img={`http://localhost:1337${post.attributes.illustration.data.attributes.url}`} />}
                         {post.attributes.markdown &&
                             <ContentMd title={post.attributes.supertitle} markdown={
                                 post.attributes.markdown} inner={post.attributes.innerHtml} language={post.attributes.language} />
                         }
-                        <References texturl={post.attributes.reference} />
+                        {post.attributes.reference &&
+                            <References texturl={post.attributes.reference} />
+                        }
+                        <Footer />
                     </ContainerContent>
                 </Container>
             }
