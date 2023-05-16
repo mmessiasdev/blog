@@ -46,7 +46,8 @@ export default createGlobalStyle<Props>`
     }
     h5{
         font-size: 15px;
-        font-weight: lighter;    }
+        font-weight: 300;    
+    }
     h6{
         font-size: 100px;
         position: absolute; 
@@ -74,6 +75,8 @@ export default createGlobalStyle<Props>`
     .gradient{
         -webkit-mask-image: linear-gradient(to right, transparent 0%, ${p => p.theme.colors.terciary} 100%);
     }
+
+    
     .markdownContainer{
         h1{
             font-size: 50;
@@ -100,10 +103,16 @@ export default createGlobalStyle<Props>`
             color: ${props => props.theme.colors.text};
         }
         h5{
-        font-size: 13px;
-        background-color: transparent;
-        font-weight: 100;
-        color: ${props => props.theme.colors.text};
+            font-size: 15px;
+            margin-top: 10px;
+            margin-bottom: 40px;
+            background-color: transparent;
+            font-weight: 600;
+            background-color: ${props => props.theme.colors.secundaryback};
+            color: ${props => props.theme.colors.text};
+            padding: 20px;
+            border-radius: 10px;
+            cursor: text;
         }
         h6{
             font-size: 10px;

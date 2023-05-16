@@ -8,4 +8,6 @@ type PostsModel = {
     create: string,
     attributes: any,
     reference: string,
+    innerHtml: boolean,
+    language: string,
 }
