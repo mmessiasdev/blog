@@ -20,7 +20,6 @@ const ContentMd = ({ markdown, title, inner, language }: props) => {
                 </Container>
                 <Highlight innerHTML={inner} className={language}>
                     {markdown}
-
                 </Highlight>
             </Container>
         </>

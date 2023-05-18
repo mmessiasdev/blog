@@ -28,7 +28,7 @@ const Content = () => {
             {post &&
                 <Container>
                     <DefaultTitle>
-                        <Container pad="0px 50px">
+                        <Container pad="0px 10%">
                             <TypeText tag="h2">
                                 {post.attributes.supertitle}
                             </TypeText>
@@ -36,7 +36,7 @@ const Content = () => {
                     </DefaultTitle>
                     <ContainerContent pad="0px 20%" className="contentScreen">
                         {post.attributes.subtitle &&
-                            <Subtitle subtitle={post.attributes.subtitle} desc={post.attributes.subdesc} img={`http://localhost:1337${post.attributes.illustration.data.attributes.url}`} />}
+                            <Subtitle subtitle={post.attributes.subtitle} desc={post.attributes.subdesc} img={`${post.attributes.illustration.data.attributes.url}`} />}
                         {post.attributes.markdown &&
                             <ContentMd title={post.attributes.supertitle} markdown={
                                 post.attributes.markdown} inner={post.attributes.innerHtml} language={post.attributes.language} />
