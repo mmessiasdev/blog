@@ -18,7 +18,7 @@ const Content = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:1337/api/contents/${id}?populate=*`).then(response => response.json()).then(data => setPost(data.data));
+        fetch(`http://localhost:1337/api/content-blogs/${id}?populate=*`).then(response => response.json()).then(data => setPost(data.data));
         console.log(post);
     }, [])
 
@@ -35,8 +35,8 @@ const Content = () => {
                         </Container>
                     </DefaultTitle>
                     <ContainerContent pad="0px 20%" className="contentScreen">
-                        {post.attributes.title &&
-                            <Subtitle subtitle={post.attributes.title} desc={post.attributes.desc} img={`http://localhost:1337${post.attributes.illustration.data.attributes.url}`} />}
+                        {post.attributes.subtitle &&
+                            <Subtitle subtitle={post.attributes.subtitle} desc={post.attributes.subdesc} img={`http://localhost:1337${post.attributes.illustration.data.attributes.url}`} />}
                         {post.attributes.markdown &&
                             <ContentMd title={post.attributes.supertitle} markdown={
                                 post.attributes.markdown} inner={post.attributes.innerHtml} language={post.attributes.language} />

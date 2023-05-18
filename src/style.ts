@@ -50,10 +50,7 @@ export default createGlobalStyle`
         width: 100%;
         height: 100%;
     }
-    .code{
-        padding: 20px;
-        background-color: ${props => props.theme.colors.secundaryback};
-    }
+
 
 
 

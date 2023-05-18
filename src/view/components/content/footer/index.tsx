@@ -17,7 +17,7 @@ const Footer = () => {
 
                     </Container>
                     <Container disp="flex" pad="0px 50px" direc="column" width="30%" className="aboutName">
-                        <img height="100px" width="100px" src="https://user-images.githubusercontent.com/78608382/234113642-3e6a2a32-d405-4895-b05d-57a1d5d7b9fe.png" alt="by M. Messias Developer" />
+                        <img height="100px" width="100px" src="https://user-images.githubusercontent.com/78608382/234113642-3e6a2a32-d405-4895-b05d-57a1d5d7b9fe.png" alt="by M. Messias Developer" />  
                         <Container pad="20px 0px">
                             <h5>M. Messias</h5>
                             Developer, UI/UX designer

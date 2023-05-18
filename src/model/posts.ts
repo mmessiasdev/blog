@@ -1,7 +1,7 @@
 type PostsModel = {
     id: number,
-    title: string,
-    desc: string,
+    subtitle: string,
+    subdesc: string,
     superdesc: string,
     supertitle: string,
     markdown: string,

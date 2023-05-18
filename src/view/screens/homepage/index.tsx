@@ -15,7 +15,7 @@ const HomePage = () => {
     const [post, setPosts] = useState<PostsModel[]>([]);
 
     useEffect(() => {
-        fetch("http://localhost:1337/api/contents/").then(response => response.json()).then(data => setPosts(data.data));
+        fetch("http://localhost:1337/api/content-blogs").then(response => response.json()).then(data => setPosts(data.data));
         console.log(post);
     }, [])
 
