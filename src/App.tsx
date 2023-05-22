@@ -6,6 +6,7 @@ import RoutesPage from './view/routes';
 import ThemeContainer from './view/components/content/theme';
 import { Container } from './view/components/styeles/container/style';
 
+
 const App = () => {
 
   const [theme, setTheme] = usePeristedState('theme', light);

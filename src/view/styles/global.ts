@@ -29,9 +29,6 @@ export default createGlobalStyle<Props>`
         font-size: 60px;
         text-align: center;
     }
-    .initialInfo {
-        text-align: start;
-    }
     h2{
         font-size: 40px;
         font-weight: 300;
@@ -69,11 +66,19 @@ export default createGlobalStyle<Props>`
         background-color: transparent;
         color: ${props => props.theme.colors.text};
     }
+    a:hover{
+        color: inherit;
+
+
+    }
     .imageObj{
         object-fit: cover;
     }
     .gradient{
         -webkit-mask-image: linear-gradient(to right, transparent 0%, ${p => p.theme.colors.terciary} 100%);
+    }
+    .initialInfo {
+        text-align: start;
     }
 
     
@@ -133,6 +138,30 @@ export default createGlobalStyle<Props>`
             font-size: 40px;
             color: ${props => props.theme.colors.text}; 
             text-align: center;
+        }
+    }
+
+
+    @keyframes textAnimation {
+        0%{
+            transform: scale(6);
+            opacity: 0%;
+        }
+        10%{
+            transform: scale(1.1);
+            opacity: 100%;
+        }
+        90%{
+            opacity: 100%;
+            transform: scale(1);
+        }
+        95%{
+            opacity: 0%;
+        }
+        100%{
+            transform: scale(6);
+            opacity: 0%;
+
         }
     }
 

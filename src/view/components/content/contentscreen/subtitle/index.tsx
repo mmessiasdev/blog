@@ -11,7 +11,7 @@ interface props {
 const Subtitle = ({ subtitle, desc, img }: props) => {
     return (
         <>
-            <Container pad="75px 0px">
+            <Container pad="75px 10%">
                 <TypeText tag="h3">
                     {subtitle}
                 </TypeText>
